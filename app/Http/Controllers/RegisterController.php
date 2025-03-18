@@ -76,7 +76,7 @@ class RegisterController extends Controller
         // $parametros->contrasena = $request->password;
         // $parametros->save();
 
-        return redirect()->route('post.index');
+        return redirect()->route('post.index',['user' => Auth::user()->username]);
     }
 }
 
